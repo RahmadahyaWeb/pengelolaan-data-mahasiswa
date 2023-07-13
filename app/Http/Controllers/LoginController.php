@@ -21,11 +21,11 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($request->only('username', 'password'))) {
-            return redirect('/');
+            return redirect('/')->with('success', 'Berhasil Login');
         }
 
         throw ValidationException::withMessages([
-            'username' => "Username atau Password salah!"
+            'username' => "username atau password salah!"
         ]);
     }
 }
