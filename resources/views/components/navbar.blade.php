@@ -8,9 +8,9 @@
 
     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
         <div>
-            <h3 class="m-0">
+            <h4 class="m-0">
                 @yield('title')
-            </h3>
+            </h4>
         </div>
         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
