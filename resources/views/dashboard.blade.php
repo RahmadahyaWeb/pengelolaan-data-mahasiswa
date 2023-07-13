@@ -30,7 +30,7 @@
                         Total Data Mahasiswa
                     </h5>
                     <h6 class="m-0">
-                        6
+                        {{ $mahasiswa }}
                     </h6>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                         Total Data Nilai
                     </h5>
                     <h6 class="m-0">
-                        6
+                        {{ $nilai }}
                     </h6>
                 </div>
             </div>

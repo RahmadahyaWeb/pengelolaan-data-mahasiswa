@@ -5,6 +5,8 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Mahasiswa;
+use App\Models\Nilai;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +24,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth'])->group(function () {
     // Route Dashboard
     Route::get('/', function () {
-        return view('dashboard');
+        return view('dashboard', [
+            'mahasiswa' => Mahasiswa::count(),
+            'nilai'     => Nilai::count()
+        ]);
     });
 
     // Route Data Mahasiswa
