@@ -20,7 +20,7 @@
 ## Demo
 
 ```bash
-https://drive.google.com/file/d/1keRaX1W-7ap1fuqrwZdQWwU1Ms27fM6U/view?usp=sharing
+https://youtu.be/GBQMPmOQBkI
 ```
 
 ## Cara Instalasi

@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -25,6 +26,7 @@ class ProfileController extends Controller
 
             $foto = $request->file('foto');
             $foto->storeAs('public/foto', $foto->hashName());
+            Storage::delete('public/foto/' . Auth::user()->foto);
 
             User::where('id', Auth::id())->update([
                 'username' => $request->username,
@@ -54,7 +56,7 @@ class ProfileController extends Controller
             ->update([
                 'password' => Hash::make($request->password)
             ]);
-            
+
         return redirect()->back()->with('success', 'Password Anda berhasil diperbarui!');
     }
 }
